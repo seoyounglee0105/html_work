@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        .flex-container {
+            display: flex;
+            height: 100%;
+        }
+        
+        .flex-item {
+            flex : 1; /* 부모 컨테이너 요소의 너비를 자식 요소들이 1:1:1로 나눠 가져라 */
+            /* border:  1px solid black; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flex-item-child {
+            flex : 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span {
+            background-color: black;
+            width: 33%;
+            height: 33%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "flex-container">
+        <div class = "flex-item">
+            <div class = "flex-item-child"><span>c-item1</span></div>
+            <div class = "flex-item-child"><span>c-item2</span></div>
+            <div class = "flex-item-child"><span>c-item3</span></div>
+        </div>
+        <div class = "flex-item">
+            <div class = "flex-item-child"><span>c-item4</span></div>
+            <div class = "flex-item-child"><span>c-item5</span></div>
+            <div class = "flex-item-child"><span>c-item6</span></div>
+        </div>
+        <div class = "flex-item">
+            <div class = "flex-item-child"><span>c-item7</span></div>
+            <div class = "flex-item-child"><span>c-item8</span></div>
+            <div class = "flex-item-child"><span>c-item9</span></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox 연습</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        #flex-container {            
+            display: flex;
+            height: 100%;
+            /* column으로 설정하면 주축과 교차축이 바뀜 */
+            flex-direction: column;
+        }
+
+        .flex-item {
+            height: 100%;
+            /* 부모 컨테이너 요소의 크기에 따라 비율로 차지함 */
+            flex: 1;  /* 부모 컨테이너 요소의 너비를 자식 요소들이 1:1:1로 나눠 가져라 */
+            border: 1px solid black;
+            background-color: brown;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "flex-container">
+        <div class = "flex-item">item1</div>
+        <div class = "flex-item">item2</div>
+        <div class = "flex-item">item3</div>
+    </div>
+</body>
+</html>

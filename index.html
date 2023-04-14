@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 내부 스타일 시트 -->
+    <style>
+        * {
+            /* 여백 초기화 */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh; /* 100%와 동일 */
+            background-color: aqua;
+        }
+
+        /* 
+        display : flex -> 박스 옆에 박스를 배치할 수 있음
+                                 원하는 대로 배치, 정렬 가능
+        */
+        .flex-container {
+            display: flex;  
+            /* 플렉스 아이템들을 수평 방향 정렬함 */
+            justify-content: center;
+            /* 플렉스 아이템들을 수직 방향 정렬함 */
+            align-items: center;
+            /* 높이를 지정해주지 않으면, 컨테이너 내 자식 요소의 높이만큼으로 자동 지정됨 */
+            height: 100vh;
+        }
+
+        /* 자식 요소의 배치/정렬은 항상 부모를 기준으로 생각함 */
+        /* 플렉스 컨테이너는 바로 아래 자식 요소까지만 영향을 미침 */
+        .flex-item {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class = "flex-container">
+        <div class = "flex-item">item1</div>
+    </div>
+
+
+</body>
+</html>
